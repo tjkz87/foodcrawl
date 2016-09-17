@@ -1,6 +1,8 @@
 // controller for start & end inputs
-app.controller('inputsController', ['$scope', '$http', '$state', 'RestaurantAndRoute', '$localStorage', 'Addresses', function($scope, $http, $state, RestaurantAndRoute, $localStorage, Addresses) {
+app.controller('inputsController', ['$scope', '$http', '$state', 'RestaurantAndRoute', '$localStorage', 'Addresses', 'PageTransitions', function($scope, $http, $state, RestaurantAndRoute, $localStorage, Addresses, PageTransitions) {
 
+  PageTransitions.hideBackground();
+  PageTransitions.transNavOff();
 
   Materialize.updateTextFields(); // solves input field placeholder overlapping issue
   $('select').material_select(); // solves select issues

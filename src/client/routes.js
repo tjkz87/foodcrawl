@@ -13,8 +13,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       }
     }
   })
-    .state('home.main', {
+    .state('home.start', {
       url: '/',
+      views: {
+        '': {
+          templateUrl: './views/start.html', //TODO
+          controller: 'start' //TODO
+        }
+      }
+    })
+    .state('home.main', {
+      url: '/main',
       views: {
         '': {
           templateUrl: './views/main.html',
@@ -40,12 +49,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       }
     })
     .state('home.main.map', {
-      url: 'map',
+      url: '/map',
       views: {
         'restaurantList': {
           templateUrl: './views/places.html',
           controller: function($scope, RestaurantAndRoute, Addresses) {
             // restaurants from the server
+            
             $scope.sort = {
               input: '-review_count'
             }

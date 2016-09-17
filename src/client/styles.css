@@ -11,13 +11,78 @@
 #map {
         width: 100%;
         height: 400px;
+     }
+
+.start {
+  background-image:url('FoodTrip.png');
+  background-size: cover;
+  background-repeat:no-repeat;
+  z-index:-10;
+}
+
+
+html {
+  height:100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.brand-logo {
+  font-family:'Titillium Web', sans-serif;
+  font-weight:700;
+  font-size:36px;
+  color:white;
+ /* opacity:.95;*/
+}
+
+.material-icons {
+  opacity:.9;
+}
+
+#routeSearch {
+ width:80%;
+ margin: 0 auto;
+}
+
+form label {
+   color: #fafafa ;
+   display:flex;
+}
+
+
+
+
+.splashContainer {
+  background: rgba(0,0,0,0.25);
+  margin-top:60px;
+  padding-bottom:40px;
+
+}
+.splashContainer .introText {
+  padding-top: 30px;
+  margin-bottom:20px;
+  color: white;
+  font-size:22px;
+  font-weight:400;
+}
+
+#locationContainer {
+  float:right;
+}
+
+#locationIcon {
+  display:inline-block;
+}
+
+#locationtext {
+ /*   font-weight:300;*/
+    font-size: 0.8rem;
 }
 
 .restaurantList {
-  overflow-y: scroll; 
+  overflow-y: scroll;
   height: 400px;
   /*padding: 0;*/
-  margin-bottom:  10px;
+  /*display: block;*/
 }
 
 .collection {
@@ -26,4 +91,8 @@
 
 .restaurantName {
   font-weight: bold;
+}
+
+#submit {
+  float:right;
 }

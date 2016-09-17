@@ -260,4 +260,21 @@ app.factory('RestaurantAndRoute', ['$http', '$localStorage', function($http, $lo
       console.log(userFavList);
     }
   }
-}])
+}]);
+
+app.factory('PageTransitions', function(){
+  return {
+    showBackground: function() {
+      $('body').css('background-image', 'url("FoodTrip.png")');
+    },
+    hideBackground: function() {
+      $('body').css('background-image', 'none');
+    },
+    transNavOn: function() {
+      $('nav').toggleClass('transparent', true );
+    },
+    transNavOff: function() {
+      $('nav').toggleClass('transparent', false);
+    }
+  }
+});

@@ -1,6 +1,6 @@
 <div ng-controller='inputsController' class="container">
 <!-- - - - -HEADER- - - - -->
-    <div class='header'>
+    <!-- <div class='header'> -->
 <!-- Show logout option for logged in users -->
     <!-- <div class='inline rightSide' ng-show='activeUser && !newUser'> -->
 <!--     <div>
@@ -13,31 +13,43 @@
 
 <!-- - - - -Start and End for user input- - - - -->
   <div class="section">
-    <form id='routeSearch' name='routeForm' class="row" ng-submit='submit(routeForm)'>
+    <!-- <div class="splashContainer"> -->
+    <div>
 
-      <i class="material-icons prefix" ng-click="requestCurrentLocation()">my_location</i>
-      <div ng-repeat="stop in stopsList">
-          <label ng-if="$first">Start</label>
-          <label ng-if="$last">End</label>
-          <input name="" type='text' ng-model='stop.name' required placeholder='Enter Location' ng-autocomplete>
-      </div>
-      <button ng-click="addNewStop()">Add additional stops</button>
+      <form id='routeSearch' name='routeForm' class="row" ng-submit='submit(routeForm)'>
 
-      <div input-field class="col s12 m2 l3">
-        <select ng-model='data.mode' material-select watch>
-          <option value="walking">Walking</option>
-          <option value="driving" selected>Driving</option>
-          <option value="bicycling">Bicycling</option>
-        </select>
-        <label>Mode</label>
-      </div>
 
-      <div class="input-field col s12 m4 l1 offset-m4">
-        <button class="btn waves-effect waves-light col s12" type="submit" name="action">
-          <i class="material-icons">send</i>
-        </button>
-      </div>
-    </form>
+
+        <div ng-repeat="stop in stopsList">
+            <label ng-if="$first" >Start</label>
+
+            <div id=locationContainer ng-if="$first" ng-click="requestCurrentLocation()">
+              <i  class="tiny material-icons prefix cyan-text text-accent-3" >my_location</i>
+              <text id="locationtext" class="cyan-text text-accent-3">Use Current Location</text>
+            </div>
+
+            <label ng-if="$last">End</label>
+            <input name="" type='text' ng-model='stop.name' required placeholder='Enter Location' class="white-text" ng-autocomplete>
+        </div>
+        <button ng-click="addNewStop()">Add additional stops</button>
+
+        <div input-field class="col s12 m2 l3">
+          <select ng-model='data.mode' material-select watch>
+            <option value="walking">Walking</option>
+            <option value="driving" selected>Driving</option>
+            <option value="bicycling">Bicycling</option>
+          </select>
+          <label>Mode</label>
+        </div>
+
+        <div class="input-field col s12 m12 l12">
+          <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">
+            Find My Restaurants
+          </button>
+        </div>
+      </form>
+
+    </div>
   </div>
 
 <!-- - - - -Restaurant list and map- - - - -->
@@ -50,6 +62,10 @@
       <div id='map'>
       </div>
     </div>
+  </div>
+
+<!-- - - - -Restaurant list and map- - - - -->
+  <div class="row section flex-s">
   </div>
 
 <!-- - - - -Filters and Addresses OPTIONS BAR- - - - -->
@@ -70,10 +86,10 @@
     </div>
 
   </div>
-
+<!-- 
   <div id='restaurantAndMap'>
   </div>
     <div id='mapContainer'>
-    </div>
+    </div> -->
 
 </div>
