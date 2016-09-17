@@ -2,3 +2,4 @@ node_modules
 compiled/*
 data/db/*
 npm-debug.log
+src/server/keys.js
