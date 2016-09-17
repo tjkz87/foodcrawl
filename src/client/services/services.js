@@ -17,7 +17,7 @@ app.factory('RestaurantAndRoute', ['$http', '$localStorage', function($http, $lo
     let displayHTML = `
       <div class="infoWindow">
         <div>
-          <h2 class="infoName">${place.name}</h2>
+          <h4 class="infoName">${place.name}</h4>
 
         </div>
         <div>
@@ -39,7 +39,9 @@ app.factory('RestaurantAndRoute', ['$http', '$localStorage', function($http, $lo
 
     //create info window
     let infoWindow = new google.maps.InfoWindow({
-      content: displayHTML
+      content: displayHTML, 
+      maxWidth: 150, 
+      maxHeight: 150
     });
 
     //store info window
