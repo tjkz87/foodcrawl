@@ -359,7 +359,7 @@ module.exports = {
   }, 
 
   emailFavoritesList: (req, res) => {
-
+    
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -369,8 +369,7 @@ module.exports = {
     });
 
     var html = '<h3 style="display:block;font-size:22"> Your selections are: </h3>' + req.body.favsHtml;
-    console.log("HTML IS: ", html);
-    // setup e-mail data with unicode symbols
+
     var mailOptions = {
         from: '"Food Crawl" <foodcrawl2016@gmail.com>', // sender address
         to: req.body.userEmail,// list of receivers
