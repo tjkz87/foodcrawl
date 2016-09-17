@@ -41,6 +41,7 @@
     "mongoose": "^4.5.10",
     "ngstorage": "^0.3.11",
     "nodemailer": "^2.6.0",
+    "nodemon": "^1.10.2",
     "path": "^0.12.7",
     "polyline": "^0.2.0",
     "request": "^2.74.0",
