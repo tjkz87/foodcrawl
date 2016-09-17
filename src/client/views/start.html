@@ -10,30 +10,41 @@
 
 
 
-        <div ng-repeat="stop in stopsList">
-            <label ng-if="$first" >Start</label>
 
+
+
+      <!--     <div class="col s12 m2 l2">
+            <select ng-model='data.mode' material-select watch>
+              <option value="walking">Walking</option>
+              <option value="driving" selected>Driving</option>
+              <option value="bicycling">Bicycling</option>
+            </select>
+          </div> -->
+
+
+
+
+        <div ng-repeat="stop in stopsList">
             <div id=locationContainer ng-if="$first" ng-click="requestCurrentLocation()">
               <i  class="tiny material-icons prefix cyan-text text-accent-3" >my_location</i>
               <text id="locationtext" class="cyan-text text-accent-3">Use Current Location</text>
             </div>
 
+            <label ng-if="$first" >Start</label>
             <label ng-if="$last">End</label>
             <input name="" type='text' ng-model='stop.name' required placeholder='Enter Location' class="white-text" ng-autocomplete>
         </div>
-        <button ng-click="addNewStop()">Add additional stops</button>
 
-        <div input-field class="col s12 m2 l3">
-          <select ng-model='data.mode' material-select watch>
-            <option value="walking">Walking</option>
-            <option value="driving" selected>Driving</option>
-            <option value="bicycling">Bicycling</option>
-          </select>
-          <label>Mode</label>
+
+        <div class="addStop" ng-click="addNewStop()">
+          <i id="locationIcon" class="tiny material-icons white-text">add_circle</i>
+          <text class="white-text">Add additional stops</text>
         </div>
 
+
+
         <div class="input-field col s12 m12 l12">
-          <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">
+          <button id="submit" class="btn waves-effect waves-light orange accent-4" type="submit" name="action">
             Find My Restaurants
           </button>
         </div>

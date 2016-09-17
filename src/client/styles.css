@@ -59,6 +59,7 @@
 
 html {
   height: 100%;
+
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -78,26 +79,31 @@ body {
   opacity:.9;
 }
 
-/*form {
- width:80%;
- margin:auto;
-}*/
 
-/*form label {
-   color: #fafafa ;
-}*/
+#routeSearch {
+ width:80%;
+ margin: 0 auto;
+}
+
+form label {
+   color: #fafafa;
+
+   display:flex;
+}
+
+
 
 
 
 .splashContainer {
   background: rgba(0,0,0,0.25);
   margin-top:60px;
-  padding-bottom:20px;
+  padding-bottom:40px;
 
 }
 .splashContainer .introText {
   padding-top: 30px;
-  margin-bottom:10px;
+  margin-bottom:20px;
   color: white;
   font-size:22px;
   font-weight:400;
@@ -105,6 +111,10 @@ body {
 
 #locationContainer {
   float:right;
+}
+
+#locationIcon {
+  display:inline-block;
 }
 
 #locationtext {
@@ -125,4 +135,8 @@ body {
 
 .restaurantName {
   font-weight: bold;
+}
+
+#submit {
+  float:right;
 }

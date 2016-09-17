@@ -1,7 +1,7 @@
 app.controller('start', ['$scope', '$state', '$localStorage', '$http', 'PageTransitions', 'RestaurantAndRoute', function($scope, $state, $localStorage, $http, PageTransitions, RestaurantAndRoute) {
   PageTransitions.showBackground();
   PageTransitions.transNavOn();
-  
+
   $scope.stopsList = [{}, {}];
 
   $scope.data = {
@@ -103,7 +103,14 @@ app.controller('start', ['$scope', '$state', '$localStorage', '$http', 'PageTran
       }).catch(err => {
         console.log('Error submitting: ', err);
       });
-
-
   };
+
+  $scope.addNewStop = function(){
+    //var newItemNo = $scope.stopsList.length+1;
+    //$scope.stopsList.push({'id':'choice'+newItemNo});
+    $scope.stopsList.push({})
+    console.log($scope.stopsList)
+  }
+
+
 }])
