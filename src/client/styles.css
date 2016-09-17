@@ -94,7 +94,6 @@ form label {
 
 
 
-
 .splashContainer {
   background: rgba(0,0,0,0.25);
   margin-top:60px;
@@ -111,6 +110,10 @@ form label {
 
 #locationContainer {
   float:right;
+}
+
+.infoWindow {
+  max-height: 12em;
 }
 
 #locationIcon {
@@ -150,5 +153,14 @@ form label {
 i {
   margin-right: .1em;
   position: absolute;
-  margin-top: .3em;
+  margin-top: .1em;
+}
+
+i.cyan-text {
+  margin-top: .2em;
+}
+
+div.scrolling-stop-list {
+  max-height: 15em;
+  overflow-y:auto;
 }
