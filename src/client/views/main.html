@@ -1,4 +1,4 @@
-<div ng-controller='inputsController' class="container">
+<div ng-controller='inputsController' class="container fill">
 <!-- - - - -HEADER- - - - -->
     <!-- <div class='header'> -->
 <!-- Show logout option for logged in users -->
@@ -12,26 +12,20 @@
 
 
 <!-- - - - -Start and End for user input- - - - -->
-  <div class="section">
-    <!-- <div class="splashContainer"> -->
-    <div>
+  <div id="mapAndListContainer" class="row section flex-s">
+    <div class="col s12 l6" id='restaurantDiv'>
+<!--       <form id='routeSearch' name='routeForm' ng-submit='submit(routeForm)'>
+        <div class="input-field col s12" ng-repeat="stop in stopsList">
+          <input type='text' ng-model='stop.name' required placeholder='Enter Location' ng-autocomplete>
+          
+          <div id=locationContainer ng-if="$first" ng-click="requestCurrentLocation()">
+            <i  class="tiny material-icons prefix cyan-text text-accent-3" >my_location</i>
+            <text id="locationtext" class="cyan-text text-accent-3">Use Current Location</text>
+          </div>
 
-      <form id='routeSearch' name='routeForm' class="row" ng-submit='submit(routeForm)'>
-
-
-
-        <div ng-repeat="stop in stopsList">
-            <label ng-if="$first" >Start</label>
-
-            <div id=locationContainer ng-if="$first" ng-click="requestCurrentLocation()">
-              <i  class="tiny material-icons prefix cyan-text text-accent-3" >my_location</i>
-              <text id="locationtext" class="cyan-text text-accent-3">Use Current Location</text>
-            </div>
-
-            <label ng-if="$last">End</label>
-            <input name="" type='text' ng-model='stop.name' required placeholder='Enter Location' class="white-text" ng-autocomplete>
+          <label ng-if="$first" >Start</label>
+          <label ng-if="$last">End</label>
         </div>
-        <button ng-click="addNewStop()">Add additional stops</button>
 
         <div input-field class="col s12 m2 l3">
           <select ng-model='data.mode' material-select watch>
@@ -42,26 +36,40 @@
           <label>Mode</label>
         </div>
 
-        <div class="input-field col s12 m12 l12">
+        <div input-field>
+          <button class="btn waves-effect" ng-click="addNewStop()">Add additional stops</button>
+        </div>
+
+        <div input-field class="col s12 m12 l12">
           <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">
             Find My Restaurants
           </button>
         </div>
       </form>
-
+ -->  
+      <div ui-view='restaurantList' id="resList">
+      </div>
+      <!-- <div ng-controller='inputsController' ng-class="{ 'has-error' : signupForm.name.$invalid && !signupForm.name.$pristine }">
+        <form id='routeSearch' name='emailForm' ng-submit='submitFavorites()' novalidate>
+            <input class="input-field col s8 m4 l8 offset-m4" name="email" type='email' ng-model='userEmail' 
+              required placeholder='Enter Your Email to Receive Selections'>
+              <p ng-show="emailForm.email.$error.email" class="help-block">Not a valid email.</p>  
+            <button class="btn waves-effect waves-light m4 s4 l2 offset-m1 offset-l1 col" type="submit" name="action">
+              <i class="material-icons">send</i>
+            </button>
+        </form>
+      </div>  -->
     </div>
+    <div class="col s12 l6 mapcontainer">
+      <div id='map'>
+      </div>
+    </div>
+    <!-- <div class="col s12 l6">
+    </div> -->
   </div>
 
 <!-- - - - -Restaurant list and map- - - - -->
   <div class="row section flex-s">
-    <div class="col s12 l6" id='restaurantDiv'>
-      <div ui-view='restaurantList'>
-      </div>
-    </div>
-    <div class="col s12 l6">
-      <div id='map'>
-      </div>
-    </div>
   </div>
 
 <!-- - - - -Restaurant list and map- - - - -->
@@ -86,10 +94,4 @@
     </div>
 
   </div>
-<!-- 
-  <div id='restaurantAndMap'>
-  </div>
-    <div id='mapContainer'>
-    </div> -->
-
 </div>
