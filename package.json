@@ -7,7 +7,10 @@
     "test": "mocha compiled/tests --timeout 5000 && karma start",
     "compile": "babel src --out-dir compiled --presets=es2015 --source-maps inline --copy-files --watch",
     "rebase": "git pull --rebase upstream master && git push origin master",
-    "start": "nodemon compiled/server/server.js"
+    "start": "node compiled/server/server.js"
+  },
+  "engines": {
+    "node": "6.3.1"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "mongoose": "^4.5.10",
     "ngstorage": "^0.3.11",
     "nodemailer": "^2.6.0",
+    "nodemon": "^1.10.2",
     "path": "^0.12.7",
     "polyline": "^0.2.0",
     "request": "^2.74.0",
