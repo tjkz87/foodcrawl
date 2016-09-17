@@ -4,6 +4,12 @@ app.controller('inputsController', ['$scope', '$http', '$state', 'RestaurantAndR
   PageTransitions.hideBackground();
   PageTransitions.transNavOff();
 
+  var mapAndListContainerHeight = $(window).height() - 60;
+  var restaurantListHeight = $(window).height() - 130;
+
+  $('#mapAndListContainer').css('height', mapAndListContainerHeight + 'px');
+  $('#restaurantDiv').css('height', restaurantListHeight + 'px');
+
   Materialize.updateTextFields(); // solves input field placeholder overlapping issue
   $('select').material_select(); // solves select issues
 
