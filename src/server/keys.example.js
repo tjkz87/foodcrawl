@@ -6,5 +6,5 @@ module.exports = {
   yelpToken: 'YOUR_YELP_TOKEN',
   yelpTokenSecret: 'YOUR_YELP_TOKEN_SECRET',
   gmailPass: 'YOUR_GMAIL_PASSWORD', 
-  MONGOLAB_URI: "mongodb://vinbar:foodtrip1@ds033096.mlab.com:33096/foodtrip"
+  MONGOLAB_URI: "YOUR_MONGODB_URI"
 };
