@@ -33,6 +33,6 @@ app.post('/checkRoute', handlers.getRoutes);
 app.post('/favorites', handlers.emailFavoritesList);
 
 app.listen(process.env.PORT || 8000);
-console.log('Now listening on 127.0.0.1:8000')
+console.log('Now listening on 127.0.0.1:8000') 
 
 
