@@ -55,7 +55,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
           templateUrl: './views/places.html',
           controller: function($scope, RestaurantAndRoute, Addresses) {
             // restaurants from the server
-            
+            var restaurantListHeight = $(window).height() - 200;
+            $('.restaurantList').css('height', restaurantListHeight + 'px');
+
             $scope.sort = {
               input: '-review_count'
             }

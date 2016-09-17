@@ -1,4 +1,4 @@
-<div class="restaurantList col s12" id="resList">
+<div class="col s12" id="resList">
 <!-- <div> -->
   <!-- <div>Restaurant List</div> -->
   <div class="row">
@@ -19,7 +19,7 @@
       <div ng-controller='inputsController' ng-class="{ 'has-error' : signupForm.name.$invalid && !signupForm.name.$pristine }">
         <form id='routeSearch' class="row" name='emailForm' ng-submit='submitFavorites()' novalidate>
             <div input-field class="col s9">
-              <input name="email" type='email' ng-model='userEmail' 
+              <input name="email" type='email' ng-model='data.userEmail' 
                 required placeholder='Enter Your Email to Receive Selections'>
               
             </div>
@@ -33,7 +33,7 @@
       </div> 
     </div>
   </div>
-  <ul class="collection">
+  <ul class="restaurantList collection">
     <li ng-repeat='restaurant in restaurants | orderBy: sortTerm' ng-click='showInfoWindow(restaurant)' class="collection-item entry">
       <div class="restaurantName">{{restaurant.name}}
         <p class="secondary-content">

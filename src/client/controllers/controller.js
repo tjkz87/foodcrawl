@@ -5,7 +5,7 @@ app.controller('inputsController', ['$scope', '$http', '$state', 'RestaurantAndR
   PageTransitions.transNavOff();
 
   var mapAndListContainerHeight = $(window).height() - 60;
-  var restaurantListHeight = $(window).height() - 130;
+  var restaurantListHeight = $(window).height() - 100;
 
   $('#mapAndListContainer').css('height', mapAndListContainerHeight + 'px');
   $('#restaurantDiv').css('height', restaurantListHeight + 'px');
@@ -19,6 +19,7 @@ app.controller('inputsController', ['$scope', '$http', '$state', 'RestaurantAndR
 
   $scope.data = {
     mode: 'driving',
+    userEmail: ''
   }
   $scope.userEmail;
 
@@ -238,7 +239,7 @@ app.controller('inputsController', ['$scope', '$http', '$state', 'RestaurantAndR
   }
 
   $scope.submitFavorites = () => {
-    RestaurantAndRoute.submitFavorites($scope.userEmail);
+    RestaurantAndRoute.submitFavorites($scope.data.userEmail);
   };
   
 }]);
