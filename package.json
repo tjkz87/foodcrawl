@@ -7,7 +7,7 @@
     "test": "mocha compiled/tests --timeout 5000 && karma start",
     "compile": "babel src --out-dir compiled --presets=es2015 --source-maps inline --copy-files --watch",
     "rebase": "git pull --rebase upstream master && git push origin master",
-    "start": "nodemon compiled/server/server.js"
+    "start": "node compiled/server/server.js"
   },
   "engines": {
     "node": "6.3.1"
