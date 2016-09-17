@@ -36,7 +36,7 @@
     "express-session": "^1.14.1",
     "geolib": "^2.0.21",
     "jquery": "^3.1.0",
-    "lo dash": "^4.15.0",
+    "lodash": "^4.15.0",
     "mocha": "^3.0.2",
     "mongoose": "^4.5.10",
     "ngstorage": "^0.3.11",
