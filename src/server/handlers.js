@@ -359,7 +359,7 @@ module.exports = {
   }, 
 
   emailFavoritesList: (req, res) => {
-
+    
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
