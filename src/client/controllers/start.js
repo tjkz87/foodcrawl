@@ -46,6 +46,37 @@ app.controller('start', ['$scope', '$state', '$localStorage', '$http', 'PageTran
       console.log('Geolocation is not supported for this Browser/OS version yet.');
     }
   }
+  let handler = StripeCheckout.configure({
+    key: 'pk_test_Xz3V8MOTjqbGd0eH8JGUDVkN',
+    image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token) {
+      return $http({
+        method: 'POST',
+        url: '/chargeCard',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: {
+          stripeToken: token
+        }
+      }).then(data => {
+        //data.data === "Charge succesful"
+
+        RestaurantAndRoute.fetchRestaurants()
+           .then ( res => {
+             console.log(res,"res")
+             renderMap()
+           })
+           .catch(err => {
+             console.log('Error submitting: ', err);
+           })
+      }).catch(err => {
+        console.log(err,"error")
+      })
+    }
+  });
+
 
   var renderMap = () => {
     $state.go('home.main.map');
