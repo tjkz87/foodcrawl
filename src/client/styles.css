@@ -1,16 +1,52 @@
 @media (max-width: 992px) {
   .flex-s {
-    display: flex;
+    /*display: flex;*/
     flex-direction: column; /* Stack on top */
+  }
+  .mapcontainer: {
+    height: 300px;
+  }
+  #map: {
+    float: none;
+    height: 300px;
   }
   #restaurantDiv {
     order: 2; /* Go down, bring Box B up */
   }
 }
 
+.mapcontainer {
+
+}
+
+.container {
+  height: 100%;
+}
+
+#restaurantDiv {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+
+.flex-s {
+  display: flex;
+  /*flex-direction: row;*/
+}
+
+.fill {
+  height: 100%
+}
+
+
+
+/*#mapcontainer {
+
+}
+*/
 #map {
-        width: 100%;
-        height: 400px;
+      /*width: 100%;*/
+      height: 100%;
      }
 
 .start {
@@ -22,8 +58,13 @@
 
 
 html {
-  height:100%;
+  height: 100%;
+
   font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  height: 100%;
 }
 
 .brand-logo {
@@ -38,15 +79,18 @@ html {
   opacity:.9;
 }
 
+
 #routeSearch {
  width:80%;
  margin: 0 auto;
 }
 
 form label {
-   color: #fafafa ;
+   color: #fafafa;
+
    display:flex;
 }
+
 
 
 
@@ -80,7 +124,7 @@ form label {
 
 .restaurantList {
   overflow-y: scroll;
-  height: 400px;
+  /*height: 100%;*/
   /*padding: 0;*/
   /*display: block;*/
 }
