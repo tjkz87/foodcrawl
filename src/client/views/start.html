@@ -26,8 +26,8 @@
 
         <div ng-repeat="stop in stopsList">
             <div id=locationContainer ng-if="$first" ng-click="requestCurrentLocation()">
-              <i  class="tiny material-icons prefix cyan-text text-accent-3" >my_location</i>
-              <text id="locationtext" class="cyan-text text-accent-3">Use Current Location</text>
+              <i class="tiny material-icons prefix cyan-text text-accent-3">my_location</i>
+              <text id="locationtext" class="icontext cyan-text text-accent-3">Use Current Location</text>
             </div>
 
             <label ng-if="$first" >Start</label>
@@ -38,7 +38,7 @@
 
         <div class="addStop" ng-click="addNewStop()">
           <i id="locationIcon" class="tiny material-icons white-text">add_circle</i>
-          <text class="white-text">Add additional stops</text>
+          <text class="icontext white-text">Add additional stops</text>
         </div>
 
 
