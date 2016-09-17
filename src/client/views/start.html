@@ -6,19 +6,19 @@
       <text>Find the best places to stop and eat on your next roadtrip</text>
     </div>
 
+      <div id='locationContainer' ng-click="requestCurrentLocation()">
+        <i class="tiny material-icons prefix cyan-text text-accent-3 start">my_location</i>
+        <text id="locationtext" class="icontext cyan-text text-accent-3">Use Current Location</text>
+      </div>
       <form id='routeSearch' name='routeForm' class="row" ng-submit='submit(routeForm)'>
         <div class='scrolling-stop-list'>
           <div ng-repeat="stop in stopsList">
-              <div id=locationContainer ng-if="$first" ng-click="requestCurrentLocation()">
-                <i class="tiny material-icons prefix cyan-text text-accent-3 start">my_location</i>
-                <text id="locationtext" class="icontext cyan-text text-accent-3">Use Current Location</text>
-              </div>
-
-              <label ng-if="$first" >Start</label>
-              <label ng-if="$last">End</label>
-              <input name="" type='text' ng-model='stop.name' required placeholder='Enter Location' class="white-text" ng-autocomplete>
+            <label ng-if="$first" >Start</label>
+            <label ng-if="$last">End</label>
+            <input name="" type='text' ng-model='stop.name' required placeholder='Enter Location' class="white-text" ng-autocomplete>
           </div>
         </div>
+        
 
         <div class="addStop" ng-click="addNewStop()">
           <i id="locationIcon" class="tiny material-icons white-text start">add_circle</i>
