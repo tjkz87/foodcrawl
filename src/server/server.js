@@ -5,9 +5,10 @@ var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 var session = require('express-session');
 var handlers = require('./handlers.js');
+var keys = require('./keys.js')
 
 // open connection to MongoDB database
-mongoose.connect('mongodb://localhost/foodfood');
+mongoose.connect(keys.MONGOLAB_URI);
 
 var app = express();
 
