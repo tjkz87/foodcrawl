@@ -11,6 +11,7 @@ var keys = require('./keys.js')
 mongoose.connect(keys.MONGOLAB_URI);
 
 var app = express();
+var port = process.env.PORT || 3002;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,7 +33,6 @@ app.post('/chargeCard', handlers.chargeCard);
 app.post('/checkRoute', handlers.getRoutes);
 app.post('/favorites', handlers.emailFavoritesList);
 
-app.listen(process.env.PORT || 8000);
-console.log('Now listening on 127.0.0.1:8000') 
-
+app.listen(port);
+console.log('Now listening on port:', port); 
 
